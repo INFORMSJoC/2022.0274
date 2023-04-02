@@ -12,10 +12,6 @@ that were used in the research reported on in the paper "Globalized Distribution
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
-
-https://doi.org/10.1287/ijoc.2019.0000.cd
-
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
@@ -77,7 +73,7 @@ The folder **scripts** includes all the codes used in our experiments.
 ![Figure 5](results/CV_train.pdf)
 
 "**CV_test**" shows the out-of-sample performance of the G-ADRO model with different values of gamma, including the average total cost and probability of exceeding target.
-![Figure 5](results/CV_test.pdf)
+![Figure 6](results/CV_test.pdf)
 
 ## Replicating
 
