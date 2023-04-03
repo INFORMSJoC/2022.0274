@@ -21,6 +21,7 @@ Below is the BibTex for citing this snapshot of the repository.
   title =         {Globalized Distributionally Robust Counterpart},
   year =          {2023},
   url =           {https://github.com/INFORMSJoC/2022.0274},
+  doi =           {10.1287/ijoc.2022.0274.cd},
 }  
 ```
 
