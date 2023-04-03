@@ -1,13 +1,5 @@
-"**GADRO-1**": the data in the figure is obtained by running "**Violation_main**" in the folder **GADRO-Violation**.
+1. In the folder **GADRO**, the file [Constraint_Violation.xlsx] is obtained by running "**Violation_main**" in the folder **scripts\/GADRO-Violation** while the file [Data.mat] is obtained by running "**GADRO_main**" in the folder **GADRO-Trade_off**.
 
-![Figure 1](results/GADRO-1.pdf)
+2. In the folder **GARS**, the file [Constraint Violation.xlsx] is obtained by running "**Violation_main**" in the folder **GARS-Violation** while the file [Data.mat] is obtained by running "**GARS_main**" in the folder **GARS-Trade_off**.
 
-"**GADRO-2**": the data in the figure is obtained by running "**GADRO_main**" in the folder **GADRO-Trade_off**.
-![Figure 2](results/GADRO-2.pdf)
-
-"**GARS-1**": the data in the figure is obtained by running "**Violation_main**" in the folder **GARS-Violation**.
-
-![Figure 3](results/GARS-1.pdf)
-
-"**GARS-2**": the data in the figure is obtained by running "**GADRO_main**" in the folder **GARS-Trade_off**.
-![Figure 4](results/GARS-2.pdf)
+3. In the folder **Cross-Validation**, the file [data_training] is obtained by running "**CV_main**" in the folder **Cross-Validation** while the file [data_testing] is obtained by running "**GADRO_main**" in the folder **GADRO-Trade_off**.
