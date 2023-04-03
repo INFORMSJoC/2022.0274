@@ -4,6 +4,20 @@
 
 % This function is used to compute the baseline value ,i.e. Empirical Optimization Model.
 
+%% Input Parameters
+% N: dimension of uncertainty
+% S: number of in-sample data point
+% D: upper bound of decision
+% d: sample matrix (S × S)
+% theta: size of ambiguity set
+% c1:  first stage unit cost (N × 1)
+% c2: emergency unit cost (N × 1)
+% t: distance matrix (N × N)
+
+%% Output
+% x: first-stage optimal solution (N × 1)
+% value: optimal objective value
+
 function [x,opt] = baseline(N,S,D,d,c1,c2,t)
 
 %%%% Model %%%%

@@ -4,6 +4,17 @@
 
 % This function is used to compute the optimal value of the Wasserstein DRO model.
 
+%% Input
+% N: dimension of uncertainty
+% S: number of in-sample data point
+% D: upper bound of decision
+% D1: upper bound of uncertainty
+% d: sample matrix (S × S)
+% theta: size of ambiguity set
+% c1:  first stage unit cost (N × 1)
+% c2: emergency unit cost (N × 1)
+% t: distance matrix (N × N)
+
 function [x,opt,lambda] = WassersteinDRO(theta,N,S,D,d,c1,c2,t)
 
 %%%% Model %%%%

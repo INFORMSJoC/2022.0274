@@ -1,12 +1,12 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Globalized Distributionally Robust Counterpart
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper "Globalized Distributionally Robust Counterpart" (https://doi.org/10.1287/ijoc.2019.0000) by F. Liu, Z. Chen and S. Wang. 
+that were used in the research reported on in the paper "Globalized Distributionally Robust Counterpart" by F. Liu, Z. Chen and S. Wang. 
 
 ## Cite
 
@@ -20,7 +20,6 @@ Below is the BibTex for citing this snapshot of the repository.
   publisher =     {INFORMS Journal on Computing},
   title =         {Globalized Distributionally Robust Counterpart},
   year =          {2023},
-  doi =           {10.1287/ijoc.2019.0000.cd},
   url =           {https://github.com/INFORMSJoC/2022.0274},
 }  
 ```
@@ -44,37 +43,24 @@ The folder **data** includes all the samples used in our experiments.
 
 ### Code files 
 The folder **scripts** includes all the codes used in our experiments.
-1. The code files in the folder **GADRO-Violation** are for evaluating the constraint violation of G-ADRO models under different values of the Wasserstein distance between the out-of-sample distribution and the reference distribution, where the file [Violation_main] is the main program. The codes have been used in Section 5.1 of our paper.
+1. The code files in the folder **GADRO-Violation** are for evaluating the constraint violation of G-ADRO models under different values of the Wasserstein distance between the out-of-sample distribution and the reference distribution, where the file [Violation_main.m](scripts/GADRO-Violation/Violation_main.m) is the main program. The codes have been used in Section 5.1 of our paper.
 
-2. The code files in the folder **GADRO-Trade_off** are for testing the out-of-sample performance of the G-ADRO models including the average total cost and the probability of exceeding the target, where the file [GADRO_main] is the main program. The codes have been used in Section 5.1 of our paper.
+2. The code files in the folder **GADRO-Trade_off** are for testing the out-of-sample performance of the G-ADRO models including the average total cost and the probability of exceeding the target, where the file [GADRO_main.m](scripts/GADRO-Trade_off/GADRO_main.m) is the main program. The codes have been used in Section 5.1 of our paper.
 
-3. The code files in the folder **GARS-Violation** are for evaluating the constraint violation of G-ARS models under different values of the Wasserstein distance between the out-of-sample distribution and the reference distribution, where the file [Violation_main] is the main program. The codes have been used in Section 5.2 of our paper.
+3. The code files in the folder **GARS-Violation** are for evaluating the constraint violation of G-ARS models under different values of the Wasserstein distance between the out-of-sample distribution and the reference distribution, where the file [Violation_main](scripts/GARS-Violation/Violation_main.m) is the main program. The codes have been used in Section 5.2 of our paper.
 
-4. The code files in the folder **GARS-Trade_off** are for computing the average total cost and the average target deviation of G-ARS models under different values of target, where the file [GARS_main] is the main program. The codes have been used in Section 5.2 of our paper.
+4. The code files in the folder **GARS-Trade_off** are for computing the average total cost and the average target deviation of G-ARS models under different values of target, where the file [GARS_main.m](scripts/GARS-Trade_off/GARS_main.m) is the main program. The codes have been used in Section 5.2 of our paper.
 
 5. The code files in the folder **Cross-Validation** are for selecting a proper value of gamma using a 4-fold cross-validation technique.
 
 ## Results
 
-"**GADRO-1**" shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target.
+1. In the folder **GADRO**, the file [Constraint_Violation.xlsx](results/GADRO/Constraint_Violation.xlsx) includes the constraint violation of G-ADRO models, which is exactly Table 1 in our paper. [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target while [GADRO-2.pdf](results/GADRO/GADRO-2.pdf) zooms in the region [2650, 3000] of the average total cost in Figure [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) and shows that there exists an efficient portion of the frontier. Moreover, the file [Data.mat](results/GADRO/Data.mat) includes the data in the figure (pdf).
 
-![Figure 1](results/GADRO-1.pdf)
+2. In the folder **GARS**, the file [Constraint_Violation.xlsx](results/GARS/Constraint_Violation.xlsx) includes the constraint violation of G-ARS models, which is exactly Table 2 in our paper. [GARS-1.pdf](results/GARS/GARS-1.pdf) compares the average total cost of G-ARS models under different values of target while [GARS-2.pdf](results/GARS/GARS-1.pdf) compares the average total cost of G-ARS models under different values of target. Moreover, the file [data.mat](results/GARS/data.mat) includes the data in the figure (pdf).
 
-"**GADRO-2**" zooms in the region [2650, 3000] of the average total cost in Figure "**GADRO-1**" and shows that there exists an efficient portion of the frontier.
-![Figure 2](results/GADRO-2.pdf)
-
-"**GARS-1**" compares the average total cost of G-ARS models under different values of target.
-![Figure 3](results/GARS-1.pdf)
-
-"**GARS-2**" compares the average total cost of G-ARS models under different values of target.
-![Figure 4](results/GARS-2.pdf)
-
-"**CV_train**" shows the average total cost and probability of exceeding target of the G-ADRO model with different values of gamma.
-![Figure 5](results/CV_train.pdf)
-
-"**CV_test**" shows the out-of-sample performance of the G-ADRO model with different values of gamma, including the average total cost and probability of exceeding target.
-![Figure 6](results/CV_test.pdf)
+3. In the folder **Cross-Validation**, the file [CV_train.pdf](results/Cross-Violation/CV_train.pdf) shows the average total cost and probability of exceeding target of the G-ADRO model with different values of gamma while the file [CV_test.pdf](results/Cross-Violation/CV_test.pdf) shows the out-of-sample performance of the G-ADRO model with different values of gamma, including the average total cost and probability of exceeding target. Moreover, the files [data_train.mat](results/Cross-Violation/data_train.mat) and [data_test.mat](results/Cross-Violation/data_test.mat) include the data in the figures (pdf).
 
 ## Replicating
 
-To replicate any of the results presented above, run the main program in the relevant folder.
+To replicate any of the results presented above, put all the data files and the relevant code under the same folder and run the main program.

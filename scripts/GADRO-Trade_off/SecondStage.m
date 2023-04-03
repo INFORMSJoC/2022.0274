@@ -1,3 +1,16 @@
+%%% Given the first-stage decision x, the function is to evaluate the optimal second-stage cost
+
+%% Input
+% N dimension of uncertainty
+% S number of in-sample data point
+% d sample matrix
+% x: first-stage optimal solution
+% c2  emergency unit cost
+% t: distance matrix
+
+%% Output
+% obj: optimal second-stage objective value under each demand point (S × 1)
+
 function obj = SecondStage(N,S,d,x,c2,t)
 
 obj = zeros(S,1) ;

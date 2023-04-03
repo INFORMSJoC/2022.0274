@@ -1,5 +1,18 @@
+% This function is used to solve the G-ARS model
+
+%% Input Parameters
+% N: dimension of uncertainty
+% S: number of in-sample data point
+% D: upper bound of decision
+% D1: upper bound of uncertainty
+% d: sample matrix (S × S)
+% theta: size of ambiguity set
+% T: target
+% c1:  first stage unit cost (N × 1)
+% c2: emergency unit cost (N × 1)
+% t: distance matrix (N × N)
+
 function [k,x,lambda,y,w]= GlobalRnO(N,S,D,D1,d,theta,T,c1,c2,t)
-% This function is used to solve the globalized robustness two-stage net-work lot sizing optimization problem
 
 %%%% Model %%%%
 model = rsome('GRnO') ;

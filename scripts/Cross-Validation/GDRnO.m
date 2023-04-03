@@ -1,5 +1,23 @@
-function [x,value,lambda,y,w]= GDRnO(N,S,D,D1,d,theta,c1,c2,t,k)
-% This function is used to solve the globalized robustness two-stage net-work lot sizing optimization problem
+%%% This function is used to solve the G-ADRO model.
+
+%% Input Parameters
+% N: dimension of uncertainty
+% S: number of in-sample data point
+% D: upper bound of decision
+% D1: upper bound of uncertainty
+% d: sample matrix (S × S)
+% theta: size of ambiguity set
+% c1:  first stage unit cost (N × 1)
+% c2: emergency unit cost (N × 1)
+% t: distance matrix (N × N)
+% k: the value of gamma
+
+%% Output
+% x: first-stage optimal solution (N × 1)
+% value: optimal objective value
+% lambda: optimal dual variable
+
+function [x,value,lambda]= GDRnO(N,S,D,D1,d,theta,c1,c2,t,k)
 
 %%%% Model %%%%
 model = rsome('GRnO') ;
@@ -53,9 +71,6 @@ model.append(lambda<=k);
 model.solve ;
 
 x = x.get ;
-% k = k.get ;
 lambda = lambda.get;
-y = y.get ;
-w = w.get;
 value = model.get;
 end

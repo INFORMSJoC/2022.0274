@@ -9,7 +9,10 @@ clc;
 
 tic
 
-%% Parameters and initialization
+%% Output
+% Total cost and probability of exceeding target under different values of gamma
+
+%% Input  Parameters and initialization
 
 N = 10 ;                                                                         % dimension of uncertainty
 S = 20 ;                                                                          % in-sample data point
@@ -22,8 +25,8 @@ mu = 20 ;                                                                     % 
 sigma = 15 ;                                                                % standard deviation of demand
 tolerance = 10^(-10);
 
-t = xlsread('C:\Users\liufe\Desktop\distance.xlsx','A2:J11');
-d= xlsread('C:\Users\liufe\Desktop\d_insample.xlsx','A2:T11');
+t = xlsread('distance.xlsx','A2:J11');                          % distance matrix
+d= xlsread('d_insample.xlsx','A2:T11');                     % training sample matrix
 
 %% Partition Data
 di(:,:,1) = d(:, [1:5, 11:20]);
@@ -42,7 +45,7 @@ target = opt - c1'*x_SAA;
 
 k = [linspace(0, 37, 75), lambda];
 
-%% Out-of-Sample Testing
+%% 4-fold CV
 for m = 1 : 76 % iterate gamma
 
     %% Solve the GDRO model
@@ -68,6 +71,9 @@ for m = 1 : 76 % iterate gamma
 TotalCost(m) = mean(TotalCost_GDRO(m,:));
 fprintf('The current iteration = %g\n',m)
 end
+
+
+%% Plot
 
 yyaxis left
 plot(k, TotalCost)

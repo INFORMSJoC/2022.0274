@@ -9,7 +9,10 @@ clc;
 
 tic
 
-%% Parameters and initialization
+%% Output
+% Total cost and probability of exceeding target under different values of gamma
+
+%% Input Parameters and initialization
 
 N = 10 ;                                                                         % dimension of uncertainty
 S = 20 ;                                                                          % in-sample data point
@@ -22,11 +25,9 @@ mu = 20 ;                                                                     % 
 sigma = 15 ;                                                                % standard deviation of demand
 tolerance = 10^(-10);
 
-t = xlsread('C:\Users\liufe\Desktop\distance.xlsx','A2:J11');
-d= xlsread('C:\Users\liufe\Desktop\d_insample.xlsx','A2:T11');
-d1 = xlsread('C:\Users\liufe\Desktop\d_outsample.xlsx','A2:BXX11');
-% d_test = truncatednormal(mu,sigma-3,D1,N,S);
-% d1_test = truncatednormal(mu,sigma,D1,N,S1);
+t = xlsread('distance.xlsx','A2:J11');                          % distance matrix
+d= xlsread('d_insample.xlsx','A2:T11');                     % training sample matrix
+d1 = xlsread('d_outsample.xlsx','A2:BXX11');           % testing sample matrix
 
 theta = [0, 1, 2] ;
 
@@ -42,7 +43,7 @@ for m = 1 : 3 % iterate theta
         [x(:,m,n),TotalCost_insample(m,n)] = GDRnO(N,S,D,D1,d,theta(m),c1,c2,t,k(m,n)) ;
         T(m,n) = TotalCost_insample(m,n) - c1'*x(:,m,n) ;
         
-        %% inner performance
+        %% Second-stage cost under out-of-sample distribution
         second_stage_objective_value(:,m,n) = SecondStage(N, S1, d1, x(:,m,n), c2, t);
         SecondStageCost(m,n) = mean(second_stage_objective_value(:,m,n));
         for s = 1 : S1
