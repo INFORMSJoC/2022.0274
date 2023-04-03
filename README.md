@@ -55,24 +55,11 @@ The folder **scripts** includes all the codes used in our experiments.
 
 ## Results
 
-"**GADRO-1**" shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target.
+1. In the folder **GADRO**, the file [Constraint_Violation.xlsx] includes the constraint violation of G-ADRO models, which is exactly Table 1 in our paper. [GADRO-1.pdf] shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target while [GADRO-2.pdf] zooms in the region [2650, 3000] of the average total cost in Figure "**GADRO-1**" and shows that there exists an efficient portion of the frontier. Moreover, the file [Data.mat] includes the data in the figure (pdf).
 
-![Figure 1](results/GADRO-1.pdf)
+2. In the folder **GARS**, the file [Constraint_Violation.xlsx] includes the constraint violation of G-ARS models, which is exactly Table 2 in our paper. [GARS-1.pdf] compares the average total cost of G-ARS models under different values of target while [GARS-2.pdf] compares the average total cost of G-ARS models under different values of target. Moreover, the file [Data.mat] includes the data in the figure (pdf).
 
-"**GADRO-2**" zooms in the region [2650, 3000] of the average total cost in Figure "**GADRO-1**" and shows that there exists an efficient portion of the frontier.
-![Figure 2](results/GADRO-2.pdf)
-
-"**GARS-1**" compares the average total cost of G-ARS models under different values of target.
-![Figure 3](results/GARS-1.pdf)
-
-"**GARS-2**" compares the average total cost of G-ARS models under different values of target.
-![Figure 4](results/GARS-2.pdf)
-
-"**CV_train**" shows the average total cost and probability of exceeding target of the G-ADRO model with different values of gamma.
-![Figure 5](results/CV_train.pdf)
-
-"**CV_test**" shows the out-of-sample performance of the G-ADRO model with different values of gamma, including the average total cost and probability of exceeding target.
-![Figure 6](results/CV_test.pdf)
+3. In the folder **Cross-Validation**, the file [CV_train.pdf] shows the average total cost and probability of exceeding target of the G-ADRO model with different values of gamma while the file [CV_test.pdf] shows the out-of-sample performance of the G-ADRO model with different values of gamma, including the average total cost and probability of exceeding target. Moreover, the file [Data.mat] includes the data in the figure (pdf).
 
 ## Replicating
 
