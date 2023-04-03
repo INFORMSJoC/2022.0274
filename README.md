@@ -16,7 +16,7 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ```
 @article{GDRC,
-  author =        {Feng Liu, Zhi Chen and Shuming Wang},
+  author =        {Feng Liu and Zhi Chen and Shuming Wang},
   publisher =     {INFORMS Journal on Computing},
   title =         {Globalized Distributionally Robust Counterpart},
   year =          {2023},
