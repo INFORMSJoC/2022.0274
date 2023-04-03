@@ -6,7 +6,7 @@ This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper "Globalized Distributionally Robust Counterpart" (https://doi.org/10.1287/ijoc.2019.0000) by F. Liu, Z. Chen and S. Wang. 
+that were used in the research reported on in the paper "Globalized Distributionally Robust Counterpart" by F. Liu, Z. Chen and S. Wang. 
 
 ## Cite
 
@@ -20,7 +20,6 @@ Below is the BibTex for citing this snapshot of the repository.
   publisher =     {INFORMS Journal on Computing},
   title =         {Globalized Distributionally Robust Counterpart},
   year =          {2023},
-  doi =           {10.1287/ijoc.2019.0000.cd},
   url =           {https://github.com/INFORMSJoC/2022.0274},
 }  
 ```
