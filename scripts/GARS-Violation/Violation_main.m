@@ -10,7 +10,7 @@ tic
 % Get acess to the current path and add the files in the 'main' folder to path
 current_path = pwd; 
 [parent_path, ~, ~] = fileparts(current_path); 
-addpath(strcat(parentpath, "\main"));
+addpath(strcat(parent_path, "\main"));
 
 %% Output
 % Constraint violation of the solutions of G-ARS model, which is defined
