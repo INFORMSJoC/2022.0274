@@ -9,6 +9,11 @@ clc;
 
 tic
 
+% Get acess to the current path and add the files in the 'main' folder to path
+current_path = pwd; 
+[parent_path, ~, ~] = fileparts(current_path); 
+addpath(strcat(parent_path, "\main"));
+
 %% Output
 % Total cost and probability of exceeding target under different values of gamma
 
