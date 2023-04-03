@@ -55,7 +55,7 @@ The folder **scripts** includes all the codes used in our experiments.
 
 ## Results
 
-1. In the folder **GADRO**, the file [Constraint_Violation.xlsx](results/GADRO/Constraint_Violation.xlsx) includes the constraint violation of G-ADRO models, which is exactly Table 1 in our paper. [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target while [GADRO-2.pdf](results/GADRO/GADRO-2.pdf) zooms in the region [2650, 3000] of the average total cost in Figure "**GADRO-1**" and shows that there exists an efficient portion of the frontier. Moreover, the file [Data.mat](results/GADRO/Data.mat) includes the data in the figure (pdf).
+1. In the folder **GADRO**, the file [Constraint_Violation.xlsx](results/GADRO/Constraint_Violation.xlsx) includes the constraint violation of G-ADRO models, which is exactly Table 1 in our paper. [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target while [GADRO-2.pdf](results/GADRO/GADRO-2.pdf) zooms in the region [2650, 3000] of the average total cost in Figure [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) and shows that there exists an efficient portion of the frontier. Moreover, the file [Data.mat](results/GADRO/Data.mat) includes the data in the figure (pdf).
 
 2. In the folder **GARS**, the file [Constraint Violation.xlsx](results/GARS/Constraint Violation.xlsx) includes the constraint violation of G-ARS models, which is exactly Table 2 in our paper. [GARS-1.pdf](results/GARS/GARS-1.pdf) compares the average total cost of G-ARS models under different values of target while [GARS-2.pdf](results/GARS/GARS-1.pdf) compares the average total cost of G-ARS models under different values of target. Moreover, the file [data.mat](results/GARS/data.mat) includes the data in the figure (pdf).
 
@@ -63,4 +63,4 @@ The folder **scripts** includes all the codes used in our experiments.
 
 ## Replicating
 
-To replicate any of the results presented above, run the main program in the relevant folder.
+To replicate any of the results presented above, put all the data files and the relevant code under the same folder and run the main program.
