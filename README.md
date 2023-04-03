@@ -53,6 +53,8 @@ The folder **scripts** includes all the codes used in our experiments.
 
 5. The code files in the folder **Cross-Validation** are for selecting a proper value of gamma using a 4-fold cross-validation technique.
 
+6. This **main** folder includes those .m files (functions) that could be used multiple times in the numerical experiments.
+
 ## Results
 
 1. In the folder **GADRO**, the file [Constraint_Violation.xlsx](results/GADRO/Constraint_Violation.xlsx) includes the constraint violation of G-ADRO models, which is exactly Table 1 in our paper. [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) shows the out-of-sample performance of the G-ADRO models on the trade-off between the average total cost and the probability of exceeding the target while [GADRO-2.pdf](results/GADRO/GADRO-2.pdf) zooms in the region [2650, 3000] of the average total cost in Figure [GADRO-1.pdf](results/GADRO/GADRO-1.pdf) and shows that there exists an efficient portion of the frontier. Moreover, the file [Data.mat](results/GADRO/Data.mat) includes the data in the figure (pdf).
